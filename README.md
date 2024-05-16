@@ -79,6 +79,7 @@
 
 
 ## 3. System Architecture
+![image](/uploads/952614172f07471da7f468f7451a63c6/image.png)
 
 ## 4. 팀원 소개
 ### FrontEnd
