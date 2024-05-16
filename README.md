@@ -33,11 +33,11 @@
 <img src="https://img.shields.io/badge/mock service worker-FF6A33?style=for-the-badge&logo=mockserviceworker&logoColor=white">
 
 ### Database
-<img src="https://img.shields.io/badge/mysql 8.0.36-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/mysql 5.6-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
 ![Redis](https://img.shields.io/badge/redis 7.2.4-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 
 ### AI Server
-<img src="https://img.shields.io/badge/python 3.11.0-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+<img src="https://img.shields.io/badge/python 3.12.0-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 
 ### Backend - API Server
@@ -61,10 +61,12 @@
 <img src="https://img.shields.io/badge/BeautifulSoup-000000?style=for-the-badge&logo=&logoColor=white">
 
 ### Infrastructure
-<img src="https://img.shields.io/badge/jenkins 2.426.3-D24939?style=for-the-badge&logo=jenkins&logoColor=white">
-<img src="https://img.shields.io/badge/docker 25.0.0-2496ED?style=for-the-badge&logo=docker&logoColor=white">
-<img src="https://img.shields.io/badge/nginx 1.25.3-009639?style=for-the-badge&logo=nginx&logoColor=white">
+<img src="https://img.shields.io/badge/jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white">
+<img src="https://img.shields.io/badge/docker-2496ED?style=for-the-badge&logo=docker&logoColor=white">
 <img src="https://img.shields.io/badge/aws ec2-FF9900?style=for-the-badge&logo=amazon ec2&logoColor=white">
+<img src="https://img.shields.io/badge/eks-58ACFA?style=for-the-badge&logo=Amazon%20EKS&logoColor=white">
+<img src="https://img.shields.io/badge/k8s-326CE5?style=for-the-badge&logo=Kubernetes&logoColor=white">
+<img src="https://img.shields.io/badge/fluentd-0E83C8?style=for-the-badge&logo=Fluentd&logoColor=white">
 
 ### Version control
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
