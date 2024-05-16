@@ -29,6 +29,8 @@
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ![PNPM](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220)
 ![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white)
+<img src="https://img.shields.io/badge/storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white">
+<img src="https://img.shields.io/badge/mock service worker-FF6A33?style=for-the-badge&logo=mockserviceworker&logoColor=white">
 
 ### Database
 <img src="https://img.shields.io/badge/mysql 8.0.36-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
