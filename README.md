@@ -1,15 +1,12 @@
 ![284](/uploads/43ca7c08310448ebce2cf7b83c54f058/284.png)
 
-
 1. [서비스 개요](#1-service-overview)
 1. [기술 스택](#2-기술-스택)
-1. [한눈에 보는 시스템 아키텍처](#3-한눈에-보는-시스템-아키텍처)
+1. [한눈에 보는 시스템 아키텍처](#3-system-architecture)
 1. [팀원 소개](#4-팀원-소개)
 1. [BackEnd Structure](#5-backend-structure)
 1. [FrontEnd Structure](#6-frontend-structure)
 1. [ERD](#7-erd)
-1. [API 명세서](#8-API명세서)
-1. [온터뷰 사용설명서](#9-온터뷰 사용설명서)
 
 ## 1. Service Overview
 사소한 법률 문제라 변호사 선임, 상담 비용이 더 커
@@ -23,38 +20,45 @@
 ### IDE
 <img src="https://img.shields.io/badge/intellij idea-000000?style=for-the-badge&logo=intellij idea&logoColor=white">
 <img src="https://img.shields.io/badge/visual studio code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white">
+![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=black&labelColor=green)
 
 ### Frontend
-<img src="https://img.shields.io/badge/node.js 20.11.0-339933?style=for-the-badge&logo=node.js&logoColor=white">
-<img src="https://img.shields.io/badge/axios 1.6.5-5A29E4?style=for-the-badge&logo=axios&logoColor=white">
-<img src="https://img.shields.io/badge/openvidu browser 2.29.1-000000?style=for-the-badge&logo=&logoColor=white">
-<img src="https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=sass&logoColor=white">
-<img src="https://img.shields.io/badge/vue 3.3.11-4FC98D?style=for-the-badge&logo=vue&logoColor=white">
-<img src="https://img.shields.io/badge/vuetify 3.4.10-1867C0?style=for-the-badge&logo=vuetify&logoColor=white">
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![PNPM](https://img.shields.io/badge/pnpm-%234a4a4a.svg?style=for-the-badge&logo=pnpm&logoColor=f69220)
+![React Query](https://img.shields.io/badge/-React%20Query-FF4154?style=for-the-badge&logo=react%20query&logoColor=white)
 
+### Database
+<img src="https://img.shields.io/badge/mysql 8.0.36-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
+![Redis](https://img.shields.io/badge/redis 7.2.4-%23DD0031.svg?style=for-the-badge&logo=redis&logoColor=white)
 
-### Backend
-<img src="https://img.shields.io/badge/java 17-E84135?style=for-the-badge&logo=y&logoColor=white">
-<img src="https://img.shields.io/badge/spring boot 3.2.1-6DB33F?style=for-the-badge&logo=spring boot&logoColor=white">
+### AI Server
+<img src="https://img.shields.io/badge/python 3.11.0-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+
+### Backend - API Server
+![Java](https://img.shields.io/badge/java17-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+<img src="https://img.shields.io/badge/spring boot 3.2.5-6DB33F?style=for-the-badge&logo=spring boot&logoColor=white">
 <img src="https://img.shields.io/badge/spring data jpa 3.2.1-6DB33F?style=for-the-badge&logo=t&logoColor=white">
-<img src="https://img.shields.io/badge/spring security 6.2.1-6DB33F?style=for-the-badge&logo=spring security&logoColor=white">
-<img src="https://img.shields.io/badge/spring security messaging 6.2.1-6DB33F?style=for-the-badge&logo=spring security&logoColor=white">
-<img src="https://img.shields.io/badge/swagger 2.0.2-5EA2D?style=for-the-badge&logo=spring security&logoColor=white">
-<img src="https://img.shields.io/badge/jjwt 0.8.0-000000?style=for-the-badge&logo=y&logoColor=white">
-<img src="https://img.shields.io/badge/mysql 8.0.35-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
-<img src="https://img.shields.io/badge/openvidu 2.29.0-000000?style=for-the-badge&logo=&logoColor=white">
-<img src="https://img.shields.io/badge/Spring webflux 6.1.2-000000?style=for-the-badge&logo=&logoColor=white">
-<img src="https://img.shields.io/badge/Spring websocket 6.1.2-000000?style=for-the-badge&logo=&logoColor=white">
+<img src="https://img.shields.io/badge/junit5-25A162?style=for-the-badge&logo=junit5&logoColor=white">
 <img src="https://img.shields.io/badge/querydsl 5.0.0-000000?style=for-the-badge&logo=&logoColor=white">
 
-### Auth Server
-<img src="https://img.shields.io/badge/java 17-E84135?style=for-the-badge&logo=y&logoColor=white">
-<img src="https://img.shields.io/badge/spring boot 3.2.1-6DB33F?style=for-the-badge&logo=spring boot&logoColor=white">
+### Backend - Auth Server
+![Java](https://img.shields.io/badge/java17-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+<img src="https://img.shields.io/badge/spring boot 3.2.5-6DB33F?style=for-the-badge&logo=spring boot&logoColor=white">
 <img src="https://img.shields.io/badge/spring security 6.2.1-6DB33F?style=for-the-badge&logo=spring security&logoColor=white">
-<img src="https://img.shields.io/badge/ffmpeg 0.8.0-007808?style=for-the-badge&logo=ffmpeg&logoColor=white">
-<img src="https://img.shields.io/badge/jjwt 0.8.0-000000?style=for-the-badge&logo=y&logoColor=white">
+<img src="https://img.shields.io/badge/spring data jpa 3.2.1-6DB33F?style=for-the-badge&logo=t&logoColor=white">
+<img src="https://img.shields.io/badge/JWT 0.8.0-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=FFFFFF">
+<img src="https://img.shields.io/badge/querydsl 5.0.0-000000?style=for-the-badge&logo=&logoColor=white">
 
-### Infra
+### Crawling Server
+<img src="https://img.shields.io/badge/python 3.10-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54">
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+<img src="https://img.shields.io/badge/BeautifulSoup-000000?style=for-the-badge&logo=&logoColor=white">
+
+### Infrastructure
 <img src="https://img.shields.io/badge/jenkins 2.426.3-D24939?style=for-the-badge&logo=jenkins&logoColor=white">
 <img src="https://img.shields.io/badge/docker 25.0.0-2496ED?style=for-the-badge&logo=docker&logoColor=white">
 <img src="https://img.shields.io/badge/nginx 1.25.3-009639?style=for-the-badge&logo=nginx&logoColor=white">
@@ -78,8 +82,10 @@
 쓰기
 
 ## 5. Backend File Structure
+
 ### API Server
 ```
+📁
 ├─main
 │  ├─java
 │  │  └─com
@@ -111,8 +117,94 @@
                 └─hellolaw
 ```
 
+### Auth Server
+```
+📁
+├─main
+│  └─java
+│      └─com
+│          └─hellolaw
+│              └─auth
+│                  ├─client
+│                  │  └─kakao
+│                  ├─config
+│                  ├─controller
+│                  ├─dto
+│                  ├─entity
+│                  ├─exception
+│                  ├─filter
+│                  ├─provider
+│                  ├─redis
+│                  ├─repository
+│                  ├─service
+│                  └─util
+└─test
+    └─java
+        └─com
+            └─hellolaw
+                └─auth
+```
+
+### Crawling Server
+```
+📁
+└─Crawling
+    ├─main
+    ├─category
+    └─crawl
+```
+
+### AI Server
+```
+📁
+└─AI
+    ├─BERT
+    │  ├─inference
+    │  ├─make_embedding
+    │  └─search
+    ├─GPTAssistant
+    ├─LLM
+    └─utils
+```
 
 ## 6. Frontend File Structure
+```
+📁
+├─.storybook
+├─deps
+├─public
+└─src
+    ├─api
+    ├─assets
+    │  └─svg
+    │      └─category
+    ├─components
+    │  ├─AccordionBox
+    │  ├─Avatar
+    │  ├─BottomBar
+    │  ├─Button
+    │  ├─Chat
+    │  ├─ContentBox
+    │  ├─GuideBox
+    │  ├─Icon
+    │  ├─Loading
+    │  ├─Modal
+    │  │  └─manage
+    │  └─SideBar
+    ├─hooks
+    ├─mocks
+    ├─pages
+    │  ├─AuthCheck
+    │  ├─Home
+    │  └─Main
+    ├─routes
+    ├─store
+    ├─styles
+    │  └─fonts
+    ├─test
+    ├─types
+    └─utils
+```
 
 ## 7. ERD
 ![erd](/uploads/be725437d5f972139c708c0fd3ed09c7/erd.png)
