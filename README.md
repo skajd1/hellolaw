@@ -4,8 +4,8 @@
 1. [기술 스택](#2-기술-스택)
 1. [한눈에 보는 시스템 아키텍처](#3-system-architecture)
 1. [팀원 소개](#4-팀원-소개)
-1. [BackEnd Structure](#5-backend-structure)
-1. [FrontEnd Structure](#6-frontend-structure)
+1. [BackEnd Structure](#5-backend-file-structure)
+1. [FrontEnd Structure](#6-frontend-file-structure)
 1. [ERD](#7-erd)
 
 ## 1. Service Overview
