@@ -79,7 +79,20 @@
 ## 3. System Architecture
 
 ## 4. 팀원 소개
-쓰기
+### FrontEnd
+|![image](/uploads/107636f799143eb3713ba184b544cb32/image.png)|![image](/uploads/d7a40e2afdc7474e554027cf61301915/image.png)|
+|:---:|:---:|
+|이가영👑|주재원|
+
+### BackEnd
+|![image](/uploads/e9090306bf42973c97e92b929cb1cd7b/image.png)|![image](/uploads/32be6c30dd40dad075ef921b1fc1094d/image.png)|![image](/uploads/a9ae2d60ba3b8e0c07573fe25c72a052/image.png)|
+|:---:|:---:|:---:|
+|이경민|임세환👑|최이초|
+
+### Infrastructure
+|![image](/uploads/74f1dada54809dfa5f590d76c5772d76/image.png)|
+|:---:|
+|박우철👑|
 
 ## 5. Backend File Structure
 
