@@ -52,34 +52,41 @@ AI를 통해 사용자의 상황에 맞는 과거 사례와 판례, 법안들을
 ## 3. Role And Details
 ### 시스템 아키텍처 설계 & 개발 인프라 구축
 ![Architecture-final](https://github.com/skajd1/hellolaw/assets/86655177/4754ffd0-7251-4640-b3f2-577a06ec93f0)
-- 개발/운영 환경 분리
-  - 클러스터 내부의 EC2 2개를 노드그룹에 추가하였고, Node Affinity를 활용해 각 노드에 스케쥴링 될 파드를 물리적으로 분리하였음
-  - k8s Ingress 라우팅 설정 및 도메인 CNAME 설정을 통해 https://test.{도메인} 으로 개발서버 접속 가능하게 구현
-  - <u>**테스트 완료된 stable한 버전만을 운영서버에 배포하여 서버 안정성 증가**</u>
-  - 개발서버에선 자유롭게 기능 개발을 테스트해 볼 수 있음
-- Blue-Green 무중단 배포
-  - Jenkins에서 k8s service에 patch 명령을 함으로써 기존 트래픽 경로를 수정하는 방식으로 구현
-  - <u> **기존 Rolling Update 방식에 비해 버전 교체 시간 90% 이상 단축으로 가용성 증가**</u>
-- CI/CD 파이프라인 구축
-  - ECR(AWS에서 제공하는 이미지 허브)와 Jenkins를 연동하여 이미지를 배포하는 방식으로 구현
-  - 운영서버는 k8s Deployment에 ECR로부터 최신 버전의 이미지를 받아 배포
-  - 개발서버는 SCM -> Build -> ECR Push -> Kubectl Deployment의 순서로 배포
-  - <u>**배포 실패 시에 서버가 다운되는 것을 방지하기 위한 버전 롤백 기능 구현으로 서버 가용성 증가**</u>
-- EFK 로그 모니터링 환경
-  - Fluentd(로그 수집기)를 k8s Daemonset을 이용해 각 노드에 배치
-  - <u>**Index Pattern으로 서버 별 로그를 https://log.{도메인} 에서 모니터링 할 수 있게 구현하여 개발 과정 디버깅 및 효율 증가**</u>
- 
-## 4. Wrap Up
-- EKS, ECR, ACM 등 AWS 활용하여 실서비스에 필요한 k8s 클러스터 구축 경험
-  - Linux OS에서의 작업 및 SSH 명령을 통한 CICD 파이프라인 구축 등으로 Linux에 익숙해질 수 있던 기회였음.
-- Spring Vault
-  - 기존엔 Jenkins에 Secret을 등록하여 사용했지만 이는 비효율적이다. Vault를 활용하여 Secret Key 관리를 일관성있고 편리하게 할 수 있음.
-- Ansible 및 Terraform 등 IaC 도구 필요성 느낌
-- Argo CD 등 GitOps 도구 사용 미비
-  - Kubernetes 매니페스트 파일을 git과 연동하여 배포 관리 및 자동화 설정 필요. 기존에 수작업으로 하나하나 수정해서 사용하던 방식이 너무 불편하고 비효율적이었음.
-- Pod Auto Scaling
-  - 시스템 Metric을 관제하여 파드 별 적절한 리소스 제한을 설정하고, 이를 통한 파드 스케쥴링 역량이 필요하다.
+- **개발/운영 환경 분리**
+  - 클러스터 내부의 EC2 2개를 노드그룹에 추가하여 Node Affinity를 활용해 각 노드에 스케줄링 될 파드를 물리적으로 분리하였습니다.
+  - k8s Ingress 라우팅 설정 및 도메인 CNAME 설정을 통해 `https://test.{도메인}`으로 개발 서버에 접속할 수 있도록 구현하였습니다.
+  - 테스트 완료된 안정적인 버전만을 운영 서버에 배포하여 서버 안정성을 증가시켰습니다.
+  - 개발 서버에서는 자유롭게 기능 개발을 테스트할 수 있습니다.
 
+- **Blue-Green 무중단 배포**
+  - Jenkins에서 k8s service에 patch 명령을 통해 기존 트래픽 경로를 수정하는 방식으로 구현하였습니다.
+  - 기존 Rolling Update 방식에 비해 버전 교체 시간을 90% 이상 단축하여 가용성을 증가시켰습니다.
+
+- **CI/CD 파이프라인 구축**
+  - ECR(AWS 이미지 허브)와 Jenkins를 연동하여 이미지를 배포하는 방식으로 구현하였습니다.
+  - 운영 서버는 k8s Deployment에 ECR로부터 최신 버전의 이미지를 받아 배포합니다.
+  - 개발 서버는 SCM -> Build -> ECR Push -> Kubectl Deployment의 순서로 배포합니다.
+  - 배포 실패 시 서버가 다운되는 것을 방지하기 위해 버전 롤백 기능을 구현하여 서버 가용성을 증가시켰습니다.
+
+- **EFK 로그 모니터링 환경**
+  - Fluentd(로그 수집기)를 k8s Daemonset을 이용해 각 노드에 배치하였습니다.
+  - Index Pattern으로 서버 별 로그를 `https://log.{도메인}`에서 모니터링 할 수 있게 구현하여 개발 과정의 디버깅 및 효율을 증가시켰습니다.
+
+## 4. Wrap Up
+
+- **EKS, ECR, ACM 등 AWS 활용**
+  - 실서비스에 필요한 k8s 클러스터 구축 경험을 쌓았습니다.
+  - Linux OS에서의 작업 및 SSH 명령을 통한 CI/CD 파이프라인 구축을 통해 Linux 환경에 익숙해졌습니다.
+
+- **Spring Vault**
+  - 기존에 Jenkins에 Secret을 등록하여 사용했으나, 이는 비효율적이었습니다. Vault를 활용하여 Secret Key 관리를 일관성 있고 편리하게 할 수 있었습니다.
+
+- **Ansible 및 Terraform 등 IaC 도구 필요성**
+  - Argo CD 등 GitOps 도구 사용이 미비했습니다.
+  - Kubernetes 매니페스트 파일을 git과 연동하여 배포 관리 및 자동화 설정이 필요했습니다. 기존의 수작업 방식은 너무 불편하고 비효율적이었습니다.
+
+- **Pod Auto Scaling**
+  - 시스템 Metric을 관제하여 파드 별 적절한 리소스 제한을 설정하고, 이를 통한 파드 스케줄링 역량이 필요했습니다.
 
 
 
