@@ -70,6 +70,16 @@ AI를 통해 사용자의 상황에 맞는 과거 사례와 판례, 법안들을
   - <u>**Index Pattern으로 서버 별 로그를 https://log.{도메인} 에서 모니터링 할 수 있게 구현하여 개발 과정 디버깅 및 효율 증가**</u>
  
 ## 4. Wrap Up
+- EKS, ECR, ACM 등 AWS 활용하여 실서비스에 필요한 k8s 클러스터 구축 경험
+  - Linux OS에서의 작업 및 SSH 명령을 통한 CICD 파이프라인 구축 등으로 Linux에 익숙해질 수 있던 기회였음.
+- Spring Vault
+  - 기존엔 Jenkins에 Secret을 등록하여 사용했지만 이는 비효율적이다. Vault를 활용하여 Secret Key 관리를 일관성있고 편리하게 할 수 있음.
+- Ansible 및 Terraform 등 IaC 도구 필요성 느낌
+- Argo CD 등 GitOps 도구 사용 미비
+  - Kubernetes 매니페스트 파일을 git과 연동하여 배포 관리 및 자동화 설정 필요. 기존에 수작업으로 하나하나 수정해서 사용하던 방식이 너무 불편하고 비효율적이었음.
+- Pod Auto Scaling
+  - 시스템 Metric을 관제하여 파드 별 적절한 리소스 제한을 설정하고, 이를 통한 파드 스케쥴링 역량이 필요하다.
+
 
 
 
